@@ -24,5 +24,12 @@ public class Postazione {
     @ManyToOne // più postazioni possono essere in un edificio
     @JoinColumn(name = "edificio_id")
     private Edificio edificio;
+
+    public Postazione(String descrizione, TipoPostazione tipoSala, int numeroMassimoOccupanti, Edificio edificio) {
+        this.descrizione = descrizione;
+        this.tipoSala = tipoSala;
+        this.numeroMassimoOccupanti = numeroMassimoOccupanti;
+        this.edificio = edificio;
+    }
 }
 

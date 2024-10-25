@@ -50,8 +50,6 @@ public class PostazioneService {
         log.info("La postazione con codice: " + id + " è stata elminata con successo");
     }
 
-    //metodo per il runner
-    public void salvaPostazione(Postazione postazione1) {
-    }
+
 }
 

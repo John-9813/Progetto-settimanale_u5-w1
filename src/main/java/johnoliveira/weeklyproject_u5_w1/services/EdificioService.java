@@ -49,7 +49,5 @@ public class EdificioService {
         log.info("L'edificio con ID: " + id + " è stato eliminato con successo");
     }
 
-    //metodod per il runner
-    public void salvaEdificio(Edificio edificio1) {
-    }
+   
 }

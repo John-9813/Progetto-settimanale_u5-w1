@@ -51,8 +51,6 @@ public class PrenotazioneService {
         log.info("La prenotazione con ID: " + id + " è stata eliminata con successo");
     }
 
-    // metodo per il runner
-    public void salvaPrenotazione(Prenotazione prenotazione1) {
-    }
+
 }
 

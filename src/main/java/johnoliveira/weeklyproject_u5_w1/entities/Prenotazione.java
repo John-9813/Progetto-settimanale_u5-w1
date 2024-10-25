@@ -29,7 +29,12 @@ public class Prenotazione {
     private LocalDate dataPrenotazione;
 
     // metodo per il runner
-    public Prenotazione(Utente utente1, Postazione postazione1, LocalDate localDate) {
+
+
+    public Prenotazione(LocalDate dataPrenotazione, Utente utente, Postazione postazione) {
+        this.dataPrenotazione = dataPrenotazione;
+        this.utente = utente;
+        this.postazione = postazione;
     }
 }
 

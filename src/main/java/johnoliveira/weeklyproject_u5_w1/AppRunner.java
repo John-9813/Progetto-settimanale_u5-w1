@@ -30,19 +30,19 @@ public class AppRunner implements CommandLineRunner {
         // esserci prima un utente per poter creare la prenotazione.
         // creazione di un edificio di esempio
         Edificio edificio1 = new Edificio("Edificio A", "Via Roma 1", "Milano");
-        edificioService.salvaEdificio(edificio1);
+        edificioService.creaEdificio(edificio1);
 
         // creazione di una postazione di esempio
         Postazione postazione1 = new Postazione("POST001", "Sala riunioni grande", TipoPostazione.SALA_RIUNIONI, 10, edificio1);
-        postazioneService.salvaPostazione(postazione1);
+        postazioneService.creaPostazione(postazione1);
 
         // ccreazione di un utente di esempio
         Utente utente1 = new Utente("john_oli", "John Oliver", "john.oliver@example.com");
         utenteService.saveUser(utente1);
 
         // creazione di una prenotazione di esempio
-        Prenotazione prenotazione1 = new Prenotazione(utente1, postazione1, LocalDate.now().plusDays(1));
-        prenotazioneService.salvaPrenotazione(prenotazione1);
+        Prenotazione prenotazione1 = new Prenotazione(LocalDate.now().plusDays(1), utente1, postazione1);
+        prenotazioneService.creaPrenotazione(prenotazione1);
 
         log.info("Dati caricati con successo.");
     }

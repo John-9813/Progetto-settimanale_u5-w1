@@ -21,7 +21,11 @@ public class Edificio {
     private String citta;
 
     // autogen da runner
-    public Edificio(String edificioA, String s, String milano) {
+
+    public Edificio(String nome, String indirizzo, String citta) {
+        this.nome = nome;
+        this.indirizzo = indirizzo;
+        this.citta = citta;
     }
 }
 
