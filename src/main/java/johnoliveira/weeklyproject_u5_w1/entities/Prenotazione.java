@@ -27,5 +27,9 @@ public class Prenotazione {
     private Postazione postazione;
 
     private LocalDate dataPrenotazione;
+
+    // metodo per il runner
+    public Prenotazione(Utente utente1, Postazione postazione1, LocalDate localDate) {
+    }
 }
 

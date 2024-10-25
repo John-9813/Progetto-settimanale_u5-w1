@@ -23,5 +23,8 @@ public interface PrenotazioneRepository extends JpaRepository<Prenotazione, Long
 
     // metodo per trovare prenotazioni di di un utente nella data specifica
     List<Prenotazione> findByUtenteAndDataPrenotazione(Utente utente, LocalDate dataPrenotazione);
+
+    // cerca la postazione con eventuale codice
+    List<Prenotazione> findByPostazioneCodice(String codicePostazione);
 }
 

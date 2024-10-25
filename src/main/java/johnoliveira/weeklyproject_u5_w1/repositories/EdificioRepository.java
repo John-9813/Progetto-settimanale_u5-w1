@@ -9,6 +9,6 @@ import java.util.List;
 
 @Repository
 public interface EdificioRepository extends JpaRepository<Edificio, Long> {
-    List<Edificio> findByCittàAndIndirizzo(String città, String indirizzo);
+    List<Edificio> findByCittaAndIndirizzo(String citta, String indirizzo);
 }
 

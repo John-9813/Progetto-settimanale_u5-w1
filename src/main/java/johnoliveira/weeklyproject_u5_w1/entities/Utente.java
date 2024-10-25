@@ -13,7 +13,7 @@ public class Utente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Setter(AccessLevel.NONE)
-    private long id;
+    private Long id; // lo ho cambiato in Long per un problema al tipo di id
     @Column(nullable = false, unique = true) // per garantire che ci possa essere un solo username per utente
     private String username;
     @Column(nullable = false)
@@ -26,5 +26,5 @@ public class Utente {
         this.nomeCompleto = nomeCompleto;
         this.email = email;
     }
-    
+
 }
