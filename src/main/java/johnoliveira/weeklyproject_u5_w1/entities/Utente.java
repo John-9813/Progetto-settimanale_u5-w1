@@ -1,11 +1,7 @@
 package johnoliveira.weeklyproject_u5_w1.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import jakarta.persistence.*;
+import lombok.*;
 
 @Entity
 // per ora uso tutte le annotazioni
@@ -15,7 +11,20 @@ import lombok.NoArgsConstructor;
 @Table(name = "utenti")
 public class Utente {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Setter(AccessLevel.NONE)
+    private long id;
+    @Column(nullable = false, unique = true) // per garantire che ci possa essere un solo username per utente
     private String username;
+    @Column(nullable = false)
     private String nomeCompleto;
+    @Column(nullable = false)
     private String email;
+
+    public Utente(String username, String nomeCompleto, String email) {
+        this.username = username;
+        this.nomeCompleto = nomeCompleto;
+        this.email = email;
+    }
+    
 }
